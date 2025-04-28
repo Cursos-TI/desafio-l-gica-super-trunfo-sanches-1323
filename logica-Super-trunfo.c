@@ -5,7 +5,7 @@ int main()
     unsigned long int populacao1, populacao2;
 
     int turistico1, turistico2 ; 
-    int populacaoTotal;
+    int populacaoTotal, EscolhaAtributo;
 
     char estado1[10], estado2[10]; 
     char codigo1[10], codigo2[10];
@@ -99,17 +99,124 @@ int main()
         printf("-PIB PER CAPITA:%.0f Bilhões Reais\n", percapita2);
         printf("-----------------------------\n");
 
+        printf("opção de atributos para comparação\n");
+        printf("1 :população\n");
+        printf("2 :area\n");
+        printf("3 :pib\n");
+        printf("4 :numero de pontos turisticos\n");
+        printf("5 :densidade populacional\n");
+        printf("6 :pib per capita\n");
+        printf("escolha o atributo para ser comparado\n");
+        scanf("%d", &EscolhaAtributo);
 
+        switch (EscolhaAtributo){
+        case 1:
+        printf("voçê escolheu o atributo população\n");
+        printf("populção 1:%d\n",populacao1);
+        printf("populção 2:%d\n",populacao2);
+
+        if (populacao1 > populacao2)
+        {
+        printf("população da carta 1: venceu!\n");
+        }else{
+        if (populacao1 < populacao2)
+        {
+        printf("população da carta 1: venceu!\n");
+        }else{
+        printf("comparação empatou!\n");
+        }
+        } 
+            break;
+        case 2:
+        printf("voçê escolheu o atributo area\n");
+        printf("area 1:%f\n",area1);
+        printf("area 2:%f\n",area2);
+
+        if (area1 > area2)
+        {
+        printf("carta 1: venceu!\n");
+        }else{
+        if (area1 < area2)
+        {
+        printf("carta 2: venceu!\n");
+        }else{
+        printf("comparação empatou!\n");
+        }
+        } 
+        break;
+        case 3:
+        printf("voçê escolheu o atributo pib\n");
+        printf("pib 1:%f\n",pib1);
+        printf("pib 2:%f\n",pib2);
+
+        if (pib1 > pib2)
+        {
+        printf("carta 1: venceu!\n");
+        }else{
+        if (pib1 < pib2)
+        {
+        printf("carta 2: venceu!\n");
+        }else{
+        printf("comparação empatou!\n");
+        }
+        }
+        break;
+        case 4:
+        printf("voçê escolheu o atributo pontos turisticos\n");
+        printf("numero de pontos turisticos 1:%d\n",turistico1);
+        printf("numero de pontos turisticos 2:%d\n",turistico2);
+
+        if (turistico1 > turistico2)
+        {
+        printf("carta 1: venceu!\n");
+        }else{
+        if (turistico1 < turistico2)
+        {
+        printf("carta 2: venceu!\n");
+        }else{
+        printf("comparação empatou!\n");
+        }
+        }
+        break;
+        case 5:
+        printf("voçê escolheu o atributo densidade populacional\n");
+        printf("pib 1:%f\n",densidadep1);
+        printf("pib 2:%f\n",densidadep2);
+
+        if (densidadep1 > densidadep2)
+        {
+        printf("carta 1: venceu!\n");
+        }else{
+        if (densidadep1 < densidadep2)
+        {
+        printf("carta 2: venceu!\n");
+        }else{
+        printf("comparação empatou!\n");
+        }
+        }
+        break;
+        case 6:
+        printf("voçê escolheu o atributo pib per capita\n");
+        printf("pib per capita 1:%f\n",percapita1);
+        printf("pib per capita 2:%f\n",percapita2);
+
+        if (percapita1 > percapita2)
+        {
+        printf("carta 1: venceu!\n");
+        }else{
+        if (percapita1 < percapita2)
+        {
+        printf("carta 2: venceu!\n");
+        }else{
+        printf("comparação empatou!\n");
+        }
+        }
+        break;
+        default:
+            printf("opção invalida");
+        break;
+        }
             
-        printf("COMPARAÇÃO DAS CARTAS (atributo: POPULAÇÃO)\n");
-        printf("-POPULAÇÃO 1:%d (%s)\n",populacao1,cidade1);
-        printf("-POPULAÇÃO 2:%d (%s)\n",populacao2,cidade2);
-
-            if (populacao1 > populacao2){   
-                printf("POPULAÇÃO DA CARTA1 VENCEU!");
-            }else{
-                printf("POPULAÇÃO DA CARTA2 VENCEU!");
-            }
-
+      
     return 0;
 }
